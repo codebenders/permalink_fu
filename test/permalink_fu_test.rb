@@ -3,14 +3,14 @@ require File.join(File.dirname(__FILE__), 'test_helper')
 
 class PermalinkFuTest < Test::Unit::TestCase
   @@samples = {
-    'This IS a Tripped out title!!.!1  (well/ not really)'.freeze => 'this-is-a-tripped-out-title1-well-not-really'.freeze,
+    'This IS a Tripped out title!!.!1  (well/ not really)'.freeze => 'this-is-a-tripped-out-title.1-well-not-really'.freeze,
     '////// meph1sto r0x ! \\\\\\'.freeze => 'meph1sto-r0x'.freeze,
     'āčēģīķļņū'.freeze => 'acegiklnu'.freeze,
     '中文測試 chinese text'.freeze => 'chinese-text'.freeze,
     'fööbär'.freeze => 'foobar'.freeze
   }
 
-  @@extra = { 'some-)()()-ExtRa!/// .data==?>    to \/\/test'.freeze => 'some-extra-data-to-test'.freeze }
+  @@extra = { 'some-)()()-ExtRa!/// .data==?>    to \/\/test'.freeze => 'some-extra-.data-to-test'.freeze }
 
   def test_basemodel
     @m = BaseModel.new
